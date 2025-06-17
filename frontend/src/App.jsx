@@ -5,13 +5,19 @@ import NoteDetailPage from "./pages/NoteDetailPage.jsx";
 
 const App = () => {
   return (
-    <div className="relative h-full w-full" data-theme="forest">
-      <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background: radial-gradient(125%_125%_at_50%_10%, #000_60%, #00FF9D40_100%)]" />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/create" element={<CreatePage />} />
-        <Route path="/note/:id" element={<NoteDetailPage />} />
-      </Routes>
+    <div className="relative min-h-screen w-full" data-theme="forest">
+      <div className="relative z-10">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/create" element={<CreatePage />} />
+          <Route path="/note/:id" element={<NoteDetailPage />} />
+        </Routes>
+      </div>
+
+      {/* Footer */}
+      <footer className="relative z-10 py-4 text-center text-sm text-base-content/60">
+        <p>ThinkBoard © {new Date().getFullYear()}</p>
+      </footer>
     </div>
   );
 };
