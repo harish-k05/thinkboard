@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Use the full URL in production, proxy in development
 const BASE_URL = import.meta.env.PROD 
-  ? 'http://localhost:5002/api'  // Updated port to match backend
+  ? '/api'  // In production, use relative path since frontend and backend are served from same domain
   : '/api';
 
 const instance = axios.create({
