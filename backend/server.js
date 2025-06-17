@@ -14,7 +14,8 @@ const __dirname = path.dirname(__filename);
 // Load environment variables
 const result = dotenv.config({ path: path.join(__dirname, '.env') });
 
-if (result.error) {
+// Don't exit if .env file is missing in production
+if (result.error && process.env.NODE_ENV !== 'production') {
     console.error('Error loading .env file:', result.error);
     process.exit(1);
 }
