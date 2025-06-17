@@ -76,7 +76,7 @@ const NoteDetailPage = () => {
           </Link>
           <button className="btn btn-error btn-outline" onClick={()=>{handleDelete(id)}}>
             <Trash2Icon className="size-5" />
-            Delete Note
+            <p className="hidden md:block">Delete Note</p>
           </button>
         </div>
         <div className="card bg-base-100">
